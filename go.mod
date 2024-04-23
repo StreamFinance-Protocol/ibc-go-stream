@@ -1,10 +1,11 @@
 go 1.21
 
-module github.com/cosmos/ibc-go/v8
+//module github.com/cosmos/ibc-go/v8
+module github.com/StreamProtocol-Finance/ibc-go-stream
 
-retract (
-	[v8.0.0, v8.1.1] // contains ASA-2024-007 vulnerability
-)
+// retract (
+// 	[v8.0.0, v8.1.1] // contains ASA-2024-007 vulnerability
+// )
 
 require (
 	cosmossdk.io/api v0.7.3
@@ -26,6 +27,7 @@ require (
 	github.com/cosmos/cosmos-sdk v0.50.5
 	github.com/cosmos/gogoproto v1.4.11
 	github.com/cosmos/ibc-go/modules/capability v1.0.0
+	github.com/cosmos/ibc-go/v8 v8.2.0
 	github.com/cosmos/ics23/go v0.10.0
 	github.com/golang/protobuf v1.5.4
 	github.com/grpc-ecosystem/grpc-gateway v1.16.0

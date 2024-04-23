@@ -2,6 +2,7 @@ package ibctesting
 
 import (
 	"encoding/json"
+	"fmt"
 	"testing"
 	"time"
 
@@ -120,6 +121,10 @@ func SetupWithGenesisValSet(tb testing.TB, valSet *tmtypes.ValidatorSet, genAccs
 
 	// update total supply
 	bankGenesis := banktypes.NewGenesisState(banktypes.DefaultGenesisState().Params, balances, sdk.NewCoins(), []banktypes.Metadata{}, []banktypes.SendEnabled{})
+
+	fmt.Printf("XXXXXXXXXX")
+	bankGenesis.Balances = append(bankGenesis.Balances, banktypes.Balance{Address: "dydx1jv65s3grqf6v6jl3dp4t6c9t9rk99cd8wx2cfg", Coins: sdk.NewCoins(sdk.NewInt64Coin("stake", 5000))})
+
 	genesisState[banktypes.ModuleName] = app.AppCodec().MustMarshalJSON(bankGenesis)
 
 	stateBytes, err := json.MarshalIndent(genesisState, "", " ")
