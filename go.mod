@@ -1,7 +1,7 @@
 go 1.21
 
 //module github.com/cosmos/ibc-go/v8
-module github.com/StreamProtocol-Finance/ibc-go-stream
+module github.com/StreamFinance-Protocol/ibc-go-stream
 
 // retract (
 // 	[v8.0.0, v8.1.1] // contains ASA-2024-007 vulnerability
