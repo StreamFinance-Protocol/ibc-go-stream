@@ -121,7 +121,7 @@ func SetupWithGenesisValSet(tb testing.TB, valSet *tmtypes.ValidatorSet, genAccs
 	// update total supply
 	bankGenesis := banktypes.NewGenesisState(banktypes.DefaultGenesisState().Params, balances, sdk.NewCoins(), []banktypes.Metadata{}, []banktypes.SendEnabled{})
 
-	bankGenesis.Balances = append(bankGenesis.Balances, banktypes.Balance{Address: "dydx1jv65s3grqf6v6jl3dp4t6c9t9rk99cd8wx2cfc", Coins: sdk.NewCoins(sdk.NewInt64Coin("stake", 1000000))})
+	bankGenesis.Balances = append(bankGenesis.Balances, banktypes.Balance{Address: "dydx1wau5mja7j7zdavtfq9lu7ejef05hm6ffenlcsn", Coins: sdk.NewCoins(sdk.NewInt64Coin("stake", 1000000))})
 
 	genesisState[banktypes.ModuleName] = app.AppCodec().MustMarshalJSON(bankGenesis)
 
